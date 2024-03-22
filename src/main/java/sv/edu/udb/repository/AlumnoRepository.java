@@ -28,13 +28,13 @@ public class AlumnoRepository {
         if (existeEstudiante(estudiante.getCarnet()) > 0) {
             return 0; //Estudiante ya existe;
         } else {
-            em.persist(estudiante); //Guardando el objeto en la BD
+            em.persist(estudiante);
             return 1;
         }
     }
     public int updateEstudiante(final AlumnoEntity estudiante) {
         if (existeEstudiante(estudiante.getCarnet()) > 0) {
-            em.merge(estudiante); //Guardando el objeto en la BD
+            em.merge(estudiante);
             return 1;
         } else {
             return 0;
@@ -42,10 +42,10 @@ public class AlumnoRepository {
     }
     public int eliminarEstudiante(final String carnet) {
         int filasBorradas = 0;
-//Recuperando el objeto a eliminar
+
         final AlumnoEntity est = em.find(AlumnoEntity.class, carnet);
         if (est != null) {
-            em.remove(est);//Borrando la instancia
+            em.remove(est);
             filasBorradas = 1;
         }
         return filasBorradas;

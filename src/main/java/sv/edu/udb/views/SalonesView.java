@@ -13,7 +13,7 @@ import java.util.List;
 
 @Named
 @ViewScoped
-public class SalonesView implements Serializable {
+public class SalonesView {
     @Inject
     private SalonesRepository salonesRepository;
     private SalonesEntity salonSeleccionado;

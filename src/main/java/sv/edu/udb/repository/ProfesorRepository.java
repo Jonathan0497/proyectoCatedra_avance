@@ -29,28 +29,28 @@ public class ProfesorRepository {
 
     public int saveProfesor(final ProfesorEntity profesor) {
         if (existeProfesor(profesor.getCarnetProfesor()) > 0) {
-            return 0; // Profesor ya existe;
+            return 0;
         } else {
-            em.persist(profesor); // Guardando el objeto en la BD
+            em.persist(profesor);
             return 1;
         }
     }
 
     public int updateProfesor(final ProfesorEntity profesor) {
         if (existeProfesor(profesor.getCarnetProfesor()) > 0) {
-            em.merge(profesor); // Actualizando el objeto en la BD
+            em.merge(profesor);
             return 1;
         } else {
-            return 0; // Profesor no existe
+            return 0;
         }
     }
 
     public int eliminarProfesor(final String carnet) {
         int filasBorradas = 0;
-        // Recuperando el objeto a eliminar
+
         ProfesorEntity prof = getProfesorPorCarnet(carnet);
         if (prof != null) {
-            em.remove(prof); // Borrando la instancia
+            em.remove(prof);
             filasBorradas = 1;
         }
         return filasBorradas;

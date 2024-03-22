@@ -38,7 +38,7 @@ public class ProfesorView implements Serializable {
     }
 
     public void guardarProfesor() {
-        if (profesorSeleccionado.getIdProfesor() == 0) { // Si el ID es 0, se asume que es un nuevo profesor
+        if (profesorSeleccionado.getIdProfesor() == 0) {
             if (profesorRepository.saveProfesor(profesorSeleccionado) == 1) {
                 JsfUtil.setFlashMessage("exito", "Profesor agregado exitosamente");
             } else {

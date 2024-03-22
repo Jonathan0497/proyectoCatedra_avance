@@ -30,20 +30,20 @@ public class MateriaRepository {
 
     public void saveMateria(final MateriaEntity materia) {
         if (!isExist(materia.getIdMateria())) {
-            em.persist(materia); // Guardando el objeto en la BD
+            em.persist(materia);
         }
     }
 
     public void updateMateria(final MateriaEntity materia) {
         if (isExist(materia.getIdMateria())) {
-            em.merge(materia); // Actualizando el objeto en la BD
+            em.merge(materia);
         }
     }
 
     public void deleteMateria(final int id) {
         MateriaEntity materia = findById(id);
         if (materia != null) {
-            em.remove(materia); // Borrando la instancia
+            em.remove(materia);
         }
     }
 }
