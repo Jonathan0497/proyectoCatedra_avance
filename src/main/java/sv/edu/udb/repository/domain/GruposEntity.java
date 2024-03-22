@@ -12,7 +12,6 @@ import jakarta.persistence.*;
         @NamedQuery(name = "GrupoEntity.findBySalon", query = "SELECT g FROM GruposEntity g WHERE g.idSalon = :idSalon"),
         @NamedQuery(name = "GrupoEntity.isExist", query = "SELECT COUNT(g) FROM GruposEntity g WHERE g.idGrupo = :idGrupo")
 })
-
 public class GruposEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

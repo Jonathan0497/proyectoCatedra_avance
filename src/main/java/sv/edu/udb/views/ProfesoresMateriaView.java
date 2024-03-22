@@ -6,9 +6,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import sv.edu.udb.common.JsfUtil;
 import sv.edu.udb.repository.ProfesoresMateriaRepository;
-import sv.edu.udb.repository.domain.ProfesoresMateriaEntity;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Named

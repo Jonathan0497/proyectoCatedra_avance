@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "profesores_materia", schema = "centro_escolar")
-
 @NamedQueries({
         @NamedQuery(name = "ProfesorMateriaEntity.findAll", query = "SELECT pm FROM ProfesoresMateriaEntity pm"),
         @NamedQuery(name = "ProfesorMateriaEntity.findById", query = "SELECT pm FROM ProfesoresMateriaEntity pm WHERE pm.idProfesorMateria = :idProfesorMateria"),
@@ -12,7 +11,6 @@ import jakarta.persistence.*;
         @NamedQuery(name = "ProfesorMateriaEntity.findByMateria", query = "SELECT pm FROM ProfesoresMateriaEntity pm WHERE pm.idMateria = :idMateria"),
         @NamedQuery(name = "ProfesorMateriaEntity.isExist", query = "SELECT COUNT(pm) FROM ProfesoresMateriaEntity pm WHERE pm.idProfesorMateria = :idProfesorMateria")
 })
-
 public class ProfesoresMateriaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

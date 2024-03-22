@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "materia", schema = "centro_escolar")
-
 @NamedQueries({
         @NamedQuery(name = "MateriaEntity.findAll", query = "SELECT m FROM MateriaEntity m"),
         @NamedQuery(name = "MateriaEntity.findById", query = "SELECT m FROM MateriaEntity m WHERE m.idMateria = :idMateria"),

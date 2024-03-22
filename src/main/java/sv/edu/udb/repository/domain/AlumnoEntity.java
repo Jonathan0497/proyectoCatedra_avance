@@ -19,8 +19,6 @@ import java.sql.Date;
         @NamedQuery(name = "AlumnoEntity.findByIdTipoAlumno", query = "SELECT a FROM AlumnoEntity a WHERE a.idTipoAlumno = :idTipoAlumno"),
         @NamedQuery(name = "AlumnoEntity.findByIdGradoAcademido", query = "SELECT a FROM AlumnoEntity a WHERE a.idGradoAcademido = :idGradoAcademido")
 })
-
-
 public class AlumnoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

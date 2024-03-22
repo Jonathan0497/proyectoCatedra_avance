@@ -6,7 +6,6 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "profesor", schema = "centro_escolar")
-
 @NamedQueries({
         @NamedQuery(name = "ProfesorEntity.findAll", query = "SELECT p FROM ProfesorEntity p"),
         @NamedQuery(name = "ProfesorEntity.isExist", query = "SELECT COUNT(p) FROM ProfesorEntity p WHERE p.carnetProfesor = :carnetProfesor"),

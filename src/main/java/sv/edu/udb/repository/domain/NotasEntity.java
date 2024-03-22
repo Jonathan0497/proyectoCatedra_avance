@@ -14,7 +14,6 @@ import java.math.BigDecimal;
         @NamedQuery(name = "NotasEntity.findNotaByAlumnoAndProfesorMateria", query = "SELECT n FROM NotasEntity n WHERE n.idAlumno = :idAlumno AND n.idProfesorMateria = :idProfesorMateria"),
         @NamedQuery(name = "NotasEntity.isExist", query = "SELECT COUNT(n) FROM NotasEntity n WHERE n.idNotas = :idNotas")
 })
-
 public class NotasEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

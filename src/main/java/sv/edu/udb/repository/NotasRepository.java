@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import sv.edu.udb.repository.domain.NotasEntity;
+
 import java.util.List;
 
 @Transactional

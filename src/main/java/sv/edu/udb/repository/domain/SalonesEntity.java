@@ -4,14 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "salones", schema = "centro_escolar")
-
 @NamedQueries({
         @NamedQuery(name = "SalonesEntity.findAll", query = "SELECT s FROM SalonesEntity s"),
         @NamedQuery(name = "SalonesEntity.findById", query = "SELECT s FROM SalonesEntity s WHERE s.idSalon = :idSalon"),
         @NamedQuery(name = "SalonesEntity.findByNombreSalon", query = "SELECT s FROM SalonesEntity s WHERE s.nombreSalon = :nombreSalon"),
         @NamedQuery(name = "SalonesEntity.isExist", query = "SELECT COUNT(s) FROM SalonesEntity s WHERE s.idSalon = :idSalon")
 })
-
 public class SalonesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
